@@ -14,22 +14,26 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "pricedb"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "pricedb",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "pricedb",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "pricedb",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "pricedb",
     "public": false
+  },
+  "product": {
+    "dataSource": "pricedb",
+    "public": true
   }
 }
