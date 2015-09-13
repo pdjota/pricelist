@@ -1,0 +1,21 @@
+<ion-view view-title="Search for products">
+  <ion-content ng-controller="SearchCtrl">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Type Product Name or UPC..." id="search-query" ng-model="query">
+      </label>
+    </div>
+    <div id="search-results">
+    <h1>Results (click to add)</h1>
+      <div class="list">
+        <a ng-repeat="product in products | filter:query" class="item item-thumbnail-left" href="#">
+          <img ng-src="{{ product.image }}">
+          <h2>{{ product.name }}</h2>
+          <h3>UPC: {{ product.upc }}</h3>
+          <p>Price: {{ product.price }}</p>
+          <p>Stock Details</p>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
