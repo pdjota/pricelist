@@ -1,10 +1,40 @@
 <ion-view view-title="Current Cart">
   <ion-content ng-controller="CartCtrl">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      quantity
+    </div>
+    <div class="col">
+      price
+    </div>
+    <div class="col">
+      tax
+    </div>
+    <div class="col">
+      total
+    </div>
+  </div>
     <ul>
       <li ng-repeat="product in products" class="item item-thumbnail-left">
       <img ng-src="{{ product.image }}">
       <h2>{{ product.name }}</h2>
       <h3>{{ product.upc }}</h3>
+      <div class="row">
+        <div class="col">
+          {{ line.quantity }}
+        </div>
+        <div class="col">
+          {{ product.price }}
+        </div>
+        <div class="col">
+          {{ line.tax }}
+        </div>
+        <div class="col">
+          {{ line.total }}
+        </div>
+      </div>
       </li>
     </ul>
         <div class="row">

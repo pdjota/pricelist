@@ -1,34 +1,10 @@
-angular.module('starter.controllers', [])
+angular.module('priceclient.controllers', ['priceclient.services'])
 
 .controller('AppCtrl', function($scope) {
 })
-.controller('CartCtrl', function($scope) {
-  $scope.products = [
-    {
-      name: 'Blue Fedora',
-      upc: 123,
-      image: null
-    },
-    {
-      name: 'Red Hat',
-      upc: 543
-    }
-  ];
+.controller('CartCtrl', function($scope, Product) {
+  $scope.products = Product.query();
 })
-.controller('SearchCtrl', function($scope) {
-  $scope.products = [
-    {
-      name: 'Blue Fedora',
-      upc: 123,
-      image: null
-    },
-    {
-      name: 'Red Hat',
-      upc: 543
-    },
-    {
-      name: 'Green Beret',
-      upc: 533
-    }
-  ];
+.controller('SearchCtrl', function($scope, Product) {
+  $scope.products = Product.query();
 });
