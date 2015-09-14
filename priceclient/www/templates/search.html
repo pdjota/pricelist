@@ -8,7 +8,8 @@
     <div id="search-results">
     <h1>Results (click to add)</h1>
       <div class="list">
-        <a ng-repeat="product in products | filter:query" class="item item-thumbnail-left" href="#">
+        <a ng-repeat="product in products | filter:query"
+            class="item item-thumbnail-left" ng-click="addToCart(product)">
           <img ng-src="{{ product.image }}">
           <h2>{{ product.name }}</h2>
           <div class="row">

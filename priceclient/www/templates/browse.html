@@ -1,5 +1,9 @@
 <ion-view view-title="Current Cart">
   <ion-content ng-controller="CartCtrl">
+  <div class="cart" ng-hide="lines.length">
+    Please Search/Scan an Item to begin.
+  </div>
+  <div class="cart" ng-show="lines.length">
   <div class="row">
     <div class="col">
     </div>
@@ -17,16 +21,16 @@
     </div>
   </div>
     <ul>
-      <li ng-repeat="product in products" class="item item-thumbnail-left">
-      <img ng-src="{{ product.image }}">
-      <h2>{{ product.name }}</h2>
-      <h3>{{ product.upc }}</h3>
+      <li ng-repeat="line in lines" class="item item-thumbnail-left">
+      <img ng-src="{{ line.productImage }}">
+      <h2>{{ line.product.name }}</h2>
+      <h3>{{ line.product.upc }}</h3>
       <div class="row">
         <div class="col">
           {{ line.quantity }}
         </div>
         <div class="col">
-          {{ product.price }}
+          {{ line.product.price }}
         </div>
         <div class="col">
           {{ line.tax }}
@@ -39,14 +43,14 @@
     </ul>
         <div class="row">
           <div class="col">
-            <h2>Subtotal</h2>
-            <h2>Tax</h2>
-            <h2>Total due:</h2>
+            <h3>Subtotal:</h3>
+            <h3>Tax:</h3>
+            <h3>Total due:</h3>
           </div>
           <div class="col">
-            <h2>subtotal</h2>
-            <h2>tax total</h2>
-            <h1>cart total</h1>
+            <h3 style="text-align:right" ng-bind="totals.subTotal"></h3>
+            <h3 style="text-align:right" ng-bind="totals.taxes"></h3>
+            <h3 style="text-align:right" ng-bind="totals.total"></h3>
           </div>
         </div>
         <div class="row">
@@ -59,5 +63,6 @@
                 Pay with Cash
               </button>
         </div>
+     </div>
   </ion-content>
 </ion-view>

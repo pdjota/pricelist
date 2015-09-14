@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="false" ng-controller="MenuCtrl">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
@@ -21,7 +21,7 @@
           Search
         </ion-item>
         <ion-item menu-close href="#/app/browse">
-          Cart
+          Cart <span ng-if="cartLines.length"> ({{ cartLines.length }})</span>
         </ion-item>
         <ion-item menu-close href="#/app/pickups">
           Pick-ups (6)
