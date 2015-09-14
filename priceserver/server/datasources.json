@@ -1,6 +1,6 @@
 {
-    "pricedb": {
-        "name": "pricedb",
-        "connector": "mongodb"
-    }
+  "pricedb": {
+    "name": "pricedb",
+    "connector": "mongodb"
+  }
 }

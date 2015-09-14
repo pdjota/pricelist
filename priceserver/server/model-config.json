@@ -34,6 +34,8 @@
   },
   "product": {
     "dataSource": "pricedb",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
