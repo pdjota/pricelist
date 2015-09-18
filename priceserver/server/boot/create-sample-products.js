@@ -12,17 +12,32 @@ module.exports = function (application) {
 				{
 					name: 'White Fedora',
 					sku: 'WF543',
-					upc: 543
+					upc: 543,
+					price: 30
 				},
 				{
 					name: 'Red Hat',
 					sku: 'RH123',
-					upc: 123
+					upc: 123,
+					price: 45
 				},
 				{
 					name: 'Green Beret',
 					sku: 'G533N',
-					upc: 533
+					upc: 533,
+					price: 80
+				},
+				{
+					name: 'Fascinator',
+					sku: 'F516',
+					upc: 516,
+					price: 60
+				},
+				{
+					name: 'Cowboy Hat',
+					sku: 'C00H',
+					upc: 600,
+					price: 15
 				}
 				],	cb);
 		});

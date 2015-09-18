@@ -5,7 +5,6 @@ angular.module('priceclient.services', ['ngResource'])
 }).factory('Cart', function () {
   var applicableTax = 0.1;//10%
 
-
   function lineSubTotal(currentLine) {
     return currentLine.quantity * (currentLine.product.price || 0);
   }
