@@ -7,3 +7,18 @@ For backend:
 npm i -g strongloop
 
 Install genymotion as emulator for Android.
+
+## Running projects
+To launch the server,
+
+> cd priceserver
+> slc run
+
+There are some sample products in /boot subdir
+
+To run the client,
+
+> cd priceclient
+> ionic serve
+
+That would launch the Ionic webserver.
