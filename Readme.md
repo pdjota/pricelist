@@ -22,3 +22,10 @@ To run the client,
 > ionic serve
 
 That would launch the Ionic webserver.
+
+Salesforce workflow
+set application as connected app
+
+Consumer key and secret
+3MVG9KI2HHAq33RxtiAt2d.vo0F.GK9cs_cMU2zVRPknXpIvd_qqeHra0bdhPpEk.p2WIBYiTPg==
+4589889314884747037

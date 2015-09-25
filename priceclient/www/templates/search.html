@@ -11,10 +11,10 @@
         <a ng-repeat="product in products | filter:query"
             class="item item-thumbnail-left" ng-click="addToCart(product)">
           <img ng-src="{{ product.image }}">
-          <h2>{{ product.name }}</h2>
+          <h2>{{ product.Name }}</h2>
           <div class="row">
             <div class="col">
-              <h3>UPC: {{ product.upc }}</h3>
+              <h3>UPC: {{ product.Id }}</h3>
             </div>
             <div class="col">
               <p>SKU: {{ product.sku }} </p>

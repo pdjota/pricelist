@@ -1,6 +1,18 @@
 angular.module('priceclient.services', ['ngResource'])
 .factory('Product', function ($resource) {
-  var productResource = $resource('http://localhost:3000/api/products');
+  //TODO plug configuration for different REST APIS
+  // SLC API
+  //var productResource = $resource('http://localhost:3000/api/products');
+  var productResource = $resource('https://na34.salesforce.com/services/apexrest/Producto', null, {
+      query: {
+        method: 'GET',
+        headers: {
+          'Authorization': 'Bearer 00D610000008JQu!AQcAQDagK9uvnGeowPR5BnXN9Jg8HLaV7757J0y3aeLrvyzcu8HlhTbs6pC3MgOQwQAqRDe9HkGzssX2Sfc1QrDrfQFojVQM'
+        },
+        cache: true,
+        isArray: true
+      }
+  });
   return productResource;
 }).factory('Cart', function () {
   var applicableTax = 0.1;//10%
@@ -40,7 +52,7 @@ angular.module('priceclient.services', ['ngResource'])
     taxes: 0,
     total: 0
   };
-  
+
   this.addToCart = function(product, quantity) {
     console.log('addToCart', product.name, '_lines', _lines.length);
     var newLine = {
